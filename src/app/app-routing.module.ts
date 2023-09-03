@@ -8,10 +8,6 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'folder/:id',
-    loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
-  },
-  {
     path: 'login',
     loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
   },
@@ -26,11 +22,7 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
-  },
-  {
-    path: 'asistencia',
-    loadChildren: () => import('./pages/asistencia/asistencia.module').then( m => m.AsistenciaPageModule)
-  },
+  }, 
   {
     path: 'horario',
     loadChildren: () => import('./pages/horario/horario.module').then( m => m.HorarioPageModule)
@@ -49,7 +41,47 @@ const routes: Routes = [
   },
   {
     path: 'qr',
-    loadChildren: () => import('./pages/qr/qr.module').then( m => m.QRPageModule)
+    loadChildren: () => import('./pages/asignaturas/detalle/qr/qr.module').then( m => m.QRPageModule)
+  },
+  {
+    path: 'asignaturas',
+    loadChildren: () => import('./pages/asignaturas/asignaturas.module').then( m => m.AsignaturasPageModule)
+  },
+  {
+    path: 'administrador',
+    loadChildren: () => import('./pages/administrador/administrador.module').then( m => m.AdministradorPageModule)
+  },
+  {
+    path: 'administrador',
+    loadChildren: () => import('./pages/administrador/administrador.module').then( m => m.AdministradorPageModule)
+  },
+  { 
+    path: 'agregar-profesor', 
+    loadChildren: () => import('./pages/administrador/agregar-profesor/agregar-profesor.module').then(m => m.AgregarProfesorPageModule) 
+  },
+  { 
+    path: 'listar-profesor', 
+    loadChildren: () => import('./pages/administrador/listar-profesor/listar-profesor.module').then(m => m.ListarProfesorPageModule) 
+  },
+  { 
+    path: 'agregar-alumno',
+    loadChildren: () => import('./pages/administrador/agregar-alumno/agregar-alumno.module').then(m => m.AgregarAlumnoPageModule) 
+  },
+  { 
+    path: 'listar-alumno', 
+    loadChildren: () => import('./pages/administrador/listar-alumno/listar-alumno.module').then(m => m.ListarAlumnoPageModule) 
+  },
+  { 
+    path: 'agregar-user', 
+    loadChildren: () => import('./pages/administrador/agregar-user/agregar-user.module').then(m => m.AgregarUserPageModule) 
+  },
+  { 
+    path: 'listar-user', 
+    loadChildren: () => import('./pages/administrador/listar-user/listar-user.module').then(m => m.ListarUserPageModule) 
+  },
+  {
+    path: 'usuario',
+    loadChildren: () => import('./pages/usuario/usuario.module').then( m => m.UsuarioPageModule)
   }
 ];
 

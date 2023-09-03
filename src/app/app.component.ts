@@ -7,12 +7,12 @@ import { Component } from '@angular/core';
 export class AppComponent {
   public appPages = [
     { title: 'Home', url: 'home', icon: 'home' },
-    { title: 'QR', url: 'qr', icon: 'qr-code' },
-    { title: 'Asistencia', url: 'asistencia', icon: 'book' },
-    { title: 'Horario', url: 'horario', icon: 'calendar' },
+    { title: 'Asignarutas', url: 'asignaturas', icon: 'book' },
     { title: 'Profesores', url: 'prefesores', icon: 'person' },
     { title: 'Alumnos', url: 'alumno', icon: 'people' },
-    { title: 'Cerrar Session ', url: 'login', icon: 'log-out' }
+    { title: 'Escanear QR', url: 'qr', icon: 'qr-code' },
+    { title: 'Administrador', url: '/administrador', icon: 'people-circle' },
+    { title: 'Cerrar Session ', url: 'login', icon: 'log-out' },
   ];
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
   constructor() {}

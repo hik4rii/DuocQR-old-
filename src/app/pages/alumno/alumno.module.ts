@@ -9,6 +9,8 @@ import { AlumnoPageRoutingModule } from './alumno-routing.module';
 import { AlumnoPage } from './alumno.page';
 import { ListaComponent } from 'src/app/components/lista/lista.component';
 
+
+
 @NgModule({
   imports: [
     CommonModule,
@@ -17,7 +19,7 @@ import { ListaComponent } from 'src/app/components/lista/lista.component';
     AlumnoPageRoutingModule
   ],
   declarations: [
-    AlumnoPage,
-    ListaComponent]
+    AlumnoPage,ListaComponent
+    ]
 })
 export class AlumnoPageModule {}
