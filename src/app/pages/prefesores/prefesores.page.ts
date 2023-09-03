@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Profesores } from './prefesores.model';
+import { Router } from '@angular/router';
+import { ProfesoresService } from 'src/app/services/profesores.service';
 
 @Component({
   selector: 'app-prefesores',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrefesoresPage implements OnInit {
 
-  constructor() { }
+  listaProfesores : Profesores[]=[];
 
-  ngOnInit() {
-  }
+  constructor(
+    private router:Router,
+    private profesoresservice: ProfesoresService ) { }
 
+    ngOnInit() {
+      this.listaProfesores = this.profesoresservice.getAll();
+    }
+  
+    detalle() {
+      this.router.navigate(['detalle']);
+    }
 }

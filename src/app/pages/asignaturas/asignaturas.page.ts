@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Asignatura } from './asignatura.model';
+import { AsignaturasService } from 'src/app/services/asignaturas.service';
 
 @Component({
   selector: 'app-asignaturas',
@@ -8,11 +10,14 @@ import { Router } from '@angular/router';
 })
 export class AsignaturasPage implements OnInit {
 
+  listaAsignaturas: Asignatura[]=[];
+
   constructor(
-    private router:Router
-  ) { }
+    private router:Router,
+    private asignaturaservice: AsignaturasService) { }
 
   ngOnInit() {
+    this.listaAsignaturas = this.asignaturaservice.getAll();
   }
 
   detalle() {

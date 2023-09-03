@@ -13,10 +13,10 @@
 <ion-content [fullscreen]="true">
   <!-- cARTA -->
   <ion-card>
-    <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+    <img alt="Silhouette of mountains" src="{{ asignatura.imagen }}" />
     <ion-card-header>
-      <ion-card-title>Card Title</ion-card-title>
-      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+      <ion-card-title>{{ asignatura.nombre }}</ion-card-title>
+      <ion-card-subtitle>Seccion : {{ asignatura.seccion }}</ion-card-subtitle>
     </ion-card-header>
   
     <ion-card-content>
