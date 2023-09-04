@@ -3,11 +3,17 @@
     <ion-buttons slot="end">
       <ion-menu-button auto-hide="true"></ion-menu-button>
     </ion-buttons>
-    <ion-title class="textcenter">asignaturas</ion-title>
+    <ion-title class="textcenter">Asignaturas</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content>
+  
+<!-- Refresher-->
+  <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
 <!-- Carta -->
   <ion-card>
     <ion-card-header>
@@ -34,10 +40,9 @@
     </ion-fab-button>
     <ion-fab-list side="top">
       <ion-fab-button>
-        <ion-icon (click)="detalle()" name="add-circle"></ion-icon>
+        <ion-icon (click)="addAsignatura()" name="add-circle"></ion-icon>
       </ion-fab-button>
     </ion-fab-list>
   </ion-fab>
-
-
+  
 </ion-content>

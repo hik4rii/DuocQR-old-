@@ -70,10 +70,6 @@ const routes: Routes = [
     loadChildren: () => import('./pages/administrador/administrador.module').then(m => m.AdministradorPageModule)
   },
   {
-    path: 'administrador',
-    loadChildren: () => import('./pages/administrador/administrador.module').then(m => m.AdministradorPageModule)
-  },
-  {
     path: 'agregar-profesor',
     loadChildren: () => import('./pages/administrador/agregar-profesor/agregar-profesor.module').then(m => m.AgregarProfesorPageModule)
   },
@@ -100,6 +96,10 @@ const routes: Routes = [
   {
     path: 'usuario',
     loadChildren: () => import('./pages/usuario/usuario.module').then(m => m.UsuarioPageModule)
+  },
+  {
+    path: 'agregar',
+    loadChildren: () => import('./pages/asignaturas/agregar/agregar.module').then(m => m.AgregarPageModule)
   }
 ];
 

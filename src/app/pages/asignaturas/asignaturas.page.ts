@@ -10,7 +10,7 @@ import { AsignaturasService } from 'src/app/services/asignaturas.service';
 })
 export class AsignaturasPage implements OnInit {
 
-  listaAsignaturas: Asignatura[]=[];
+  listaAsignaturas: Asignatura[] = [];
 
   constructor(
     private router:Router,
@@ -20,7 +20,27 @@ export class AsignaturasPage implements OnInit {
     this.listaAsignaturas = this.asignaturaservice.getAll();
   }
 
+  ionViewWillEnter() {
+    //this.listaAsignaturas = this.asignaturaservice.getAll();
+  }
+
   detalle() {
     this.router.navigate(['detalle']);
   }
+
+  addAsignatura() {
+    this.router.navigate(['/agregar']);
+  }
+
+  listar() {
+    this.listaAsignaturas = this.asignaturaservice.getAll();
+  }
+
+  handleRefresh(event: any) {
+    setTimeout(() => {
+      this.listar();
+      event.target.complete();
+    }, 2000);
+  }
+    
 }

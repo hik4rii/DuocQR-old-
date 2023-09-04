@@ -42,5 +42,10 @@ export class AsignaturasService {
     }
   }
 
+  addAsignatura(nombre:string, seccion:string, imagen:string){
+    this.asignaturas.push({
+      nombre, seccion, imagen, id: this.asignaturas.length + 1 + ""
+    })
+  }
 
 }
