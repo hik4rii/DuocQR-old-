@@ -1,11 +1,15 @@
 import { Injectable } from '@angular/core';
+<<<<<<< HEAD
 import { Usuario } from '../pages/usuario/usuario.model';
+=======
+>>>>>>> 0f64813ab593701c09fe33cd10fe0da0509ce472
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
 
+<<<<<<< HEAD
   usuarios: Usuario[]=[
     {
       id: '1',
@@ -42,4 +46,7 @@ export class UserService {
       })
     }
   }
+=======
+  constructor() { }
+>>>>>>> 0f64813ab593701c09fe33cd10fe0da0509ce472
 }

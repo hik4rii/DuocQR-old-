@@ -13,7 +13,11 @@ export class LoadingPage implements OnInit {
   ngOnInit() {
     setTimeout(()=>{
       this.router.navigate(['login']);
+<<<<<<< HEAD
     },1500);
+=======
+    },1000);
+>>>>>>> 0f64813ab593701c09fe33cd10fe0da0509ce472
   }
 
 }

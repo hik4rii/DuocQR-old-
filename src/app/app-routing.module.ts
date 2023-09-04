@@ -8,6 +8,7 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
+<<<<<<< HEAD
     path: 'login',
     loadChildren: () => import('./pages/login/login.module').then(m => m.LoginPageModule)
   },
@@ -100,6 +101,34 @@ const routes: Routes = [
   {
     path: 'agregar',
     loadChildren: () => import('./pages/asignaturas/agregar/agregar.module').then(m => m.AgregarPageModule)
+=======
+    path: 'folder/:id',
+    loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'loading',
+    loadChildren: () => import('./pages/loading/loading.module').then( m => m.LoadingPageModule)
+  },
+  {
+    path: 'register',
+    loadChildren: () => import('./pages/register/register.module').then( m => m.RegisterPageModule)
+  },
+  {
+    path: 'home',
+    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
+  },
+  {
+    path: 'asistencia',
+    loadChildren: () => import('./pages/asistencia/asistencia.module').then( m => m.AsistenciaPageModule)
+  },
+  {
+    path: 'horario',
+    loadChildren: () => import('./pages/horario/horario.module').then( m => m.HorarioPageModule)
+>>>>>>> 0f64813ab593701c09fe33cd10fe0da0509ce472
   }
 ];
 
@@ -109,4 +138,8 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
+<<<<<<< HEAD
 export class AppRoutingModule { }
+=======
+export class AppRoutingModule {}
+>>>>>>> 0f64813ab593701c09fe33cd10fe0da0509ce472
